@@ -1,24 +1,31 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
-var handlebars  = require('gulp-compile-handlebars');
-var rename      = require('gulp-rename');
+const hb        = require('gulp-hb');
 var cache       = require('gulp-cache');
 var imagemin    = require('gulp-imagemin');
 var imageResize = require('gulp-image-resize');
-var data        = require('gulp-data');
-var path        = require('path');
-var fs          = require('fs');
 var reload      = browserSync.reload;
 
 var src = {
     scss: 'src/sass/*.scss',
-    css:  'dist/css',
-    hb:   'src/hb/*.handlebars',
+    hb:   {
+        main: 'src/hb/*.html',
+        data: './src/data/**/*.json',
+        partials: './src/hb/partials/**/*.handlebars'
+    },
     fonts:'src/fonts/*',
     img:  'src/img/*',
     icons:'src/icons/*',
 };
+
+var dist = {
+    css: 'dist/css',
+    fonts: 'dist/fonts',
+    icons: 'dist/images/',
+    img: 'dist/images',
+    main: './dist/'
+}
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass', 'hb', 'images'], function() {
@@ -29,28 +36,29 @@ gulp.task('serve', ['sass', 'hb', 'images'], function() {
 
     gulp.watch(src.scss, ['sass']);
     gulp.watch(src.scss, ['images']);
-    gulp.watch(src.hb, ['hb']);
-    gulp.watch(src.hb).on('change', reload);
+    gulp.watch(src.hb.main, ['hb']);
+    gulp.watch(src.hb.data, ['hb']);
+    gulp.watch(src.hb.main).on('change', reload);
 });
 
 // Compile sass into CSS
 gulp.task('sass', function() {
     return gulp.src(src.scss)
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest(src.css))
+        .pipe(gulp.dest(dist.css))
         .pipe(reload({stream: true}));
 });
 
 // Move fonts to dist
 gulp.task('fonts', function() {
     return gulp.src(src.fonts)
-        .pipe(gulp.dest('dist/fonts/'));
+        .pipe(gulp.dest(dist.fonts));
 });
 
 // Move icons to dist
 gulp.task('icons', function() {
     return gulp.src(src.icons)
-        .pipe(gulp.dest('dist/images/'));
+        .pipe(gulp.dest(dist.icons));
 });
 
 // Images
@@ -67,23 +75,17 @@ gulp.task('images', function () {
             progressive: true,
             interlaced: true
         })))
-        .pipe(gulp.dest('dist/images'));
+        .pipe(gulp.dest(dist.img));
 });
  
 // Compile handlebars' to html
 gulp.task('hb', function () {
-    var options = {
-        ignorePartials: true, 
-        batch : ['./src/hb/partials'],
-    }
- 
-    return gulp.src('src/hb/*.handlebars')
-        .pipe(data(function (file) {
-            return JSON.parse(fs.readFileSync('./src/data/design.json'));
-        }))
-        .pipe(handlebars(data, options))
-        .pipe(rename('index.html'))
-        .pipe(gulp.dest('dist'));
+    return gulp.src(src.hb.main)
+        .pipe(hb()
+            .partials(src.hb.partials)
+            .data(src.hb.data)
+        )
+        .pipe(gulp.dest(dist.main));
 });
 
 gulp.task('default', ['fonts', 'icons', 'serve']);
