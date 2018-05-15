@@ -2,6 +2,24 @@
 
 This is the code of my personal website and portfolio.
 
+#### Dependencies
+
+- NPM
+- Gulp
+
+Images:
+```
+apt-get install imagemagick
+apt-get install graphicsmagick
+```
+or 
+
+```
+brew install imagemagick
+brew install graphicsmagick
+```
+
+
 #### How to develop
 
 1. Clone the repo
@@ -12,7 +30,7 @@ That's it!
 
 #### How to deploy
 
-Copy dist folder contents to a new host.
+Copy dist folder contents to a static host.
 
 #### Technologies used
 
