@@ -1,0 +1,49 @@
+{
+    "menu":[
+        {
+            "name": "deixar as coisas bonitas",
+            "id": "dsn"
+        },
+        {
+            "name":"projetar soluções pensando no  usuário",
+            "id":"ux"
+        },
+        {
+            "name": "fazer sites, blogs e lojas",
+            "id": "wp"
+        },
+        {
+            "name": "transformar design em html/css",
+            "id": "frontend"
+        },
+        {
+            "name": "escrever",
+            "id": "writening"
+        },
+        {
+            "name": "imprimir 3D",
+            "id": "3d"
+        },
+        {
+            "name": "conversar com você",
+            "id": "contact"
+        }
+    ],
+    "social":[
+        {
+            "name":"Linkedin",
+            "url": "https://www.linkedin.com/in/mapreuss/",
+            "icon":"linkedin.png"
+        },
+        {
+            "name": "Behance",
+            "url": "https://www.behance.net/mapreuss",
+            "icon": "behance.png"
+        },
+        {
+            "name": "Contato",
+            "url": "#",
+            "icon": "contato.png"
+        }
+    ]
+}

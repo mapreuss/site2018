@@ -4,34 +4,30 @@
     <header>
         <p>meu nome é</p>
         <h1>Marta Preuss</h1>
-        <p>já tive uma banda chamada doninhas assassinas</p>
+        <p>{{ quotes.quote }} </p>
         <p>e eu gosto de 
             <label for="open-menu" class="menu" id="menu-selected">deixar as coisas bonitas</label>
         </p>
-        
+
         <input type="checkbox" id="open-menu" name="open-menu">
         <nav class="menu-wrapper">
             <ul>
-                <li><a href="">projetar soluções pensando no  usuário</a></li>
-                <li><a href="">fazer sites, blogs e lojas</a></li>
-                <li><a href="">transformar design em html/css</a></li>
-                <li><a href="">escrever</a></li>
-                <li><a href="">imprimir 3D</a></li>
-                <li><a href="">conversar com você</a></li>
+                {{#each menu.menu}}
+                <li><a href="{{id}}" data-action="{{id}}">{{name}}</a></li>
+                {{/each}}
             </ul>
         </nav>
         
-
         <nav class="social">
             <ul>
-                <li><a href="https://www.linkedin.com/in/mapreuss/" target="_blank" title="Linkedin"><img src="images/linkedin.png"></a></li>
-                <li><a href="https://www.behance.net/mapreuss" target="_blank" title="Behance"><img src="images/behance.png"></a></li>
-                <li><a href="" target="_blank" title="Contato"><img src="images/contato.png"></a></li>
+                {{#each menu.social}}
+                <li><a href="{{ url }}" target="_blank" title="{{ name }}"><img src="images/{{ icon }}"></a></li>
+                {{/each}}
             </ul>
         </nav>
     </header>
 
-    <section>
+    <section id="dsn">
         {{#each design.projects}}
             <article>
                 <figure>
@@ -43,7 +39,5 @@
             </article>
         {{/each}}
     </section>
-
-
 </div>
 {{> footer}}
