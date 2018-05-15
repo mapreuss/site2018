@@ -1,0 +1,120 @@
+@import "node_modules/normalize-scss/sass/normalize/import-now";
+// Fonts
+@font-face {
+    font-family: 'gloss_and_bloom';
+    src: url('../fonts/gloss_and_bloom-webfont.woff2') format('woff2'),
+         url('../fonts/gloss_and_bloom-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// Defaults
+body{
+    background: #F0F0F0;
+    font: 16px 'Courier New', sans-serif;
+    color: #707070;
+}
+.container{
+    max-width: 1640px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+figure{
+    padding: 0;
+    margin: 0;
+}
+
+// Typography
+h1{
+    font: 30px/30px 'gloss_and_bloom', sans-serif;
+    margin: 0;
+    padding: 1em 0;
+}
+h2{
+    font-size: 16px;
+}
+p{
+    margin: 0;
+    padding: 0.5em 0;
+}
+a, a:visited, a:hover{
+    text-decoration: none;
+    color: #707070;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+// Social nav
+header .social{
+    float: right;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        li{
+            width: 32px;
+            height: 32px;
+            margin: 0 7px;
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+// Select options menu
+.menu{
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    cursor: pointer;
+    &:after{
+        content: "";
+        width: 16px;
+        height: 9px;
+        background: url(../images/arrow-down.png) no-repeat 0 0;
+        display: inline-block;
+        margin-left: 10px;
+    }
+    &:active &:after{
+        transform: rotate(180deg);
+    }
+}
+.menu-wrapper{
+    margin-left: 135px;
+    position: absolute;
+    height: 0;
+    max-height: 200px;
+    transition: height 200ms;
+    overflow: hidden;
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    li{
+        padding: 8px 0;
+    }
+}
+input[type="checkbox"]{
+    display: none;
+}
+input[type="checkbox"]:checked + .menu-wrapper{
+    height: 200px;
+}
+
+// Portfolio items
+section{
+    display: flex;
+    margin-top: 100px;
+    article{
+        flex: 1;
+    }
+}
