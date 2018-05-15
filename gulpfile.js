@@ -49,7 +49,7 @@ gulp.task('fonts', function() {
 
 // Move icons to dist
 gulp.task('icons', function() {
-    return gulp.src(src.fonts)
+    return gulp.src(src.icons)
         .pipe(gulp.dest('dist/images/'));
 });
 
