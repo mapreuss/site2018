@@ -1,0 +1,11 @@
+{
+    "projects": [
+        {
+            "name": "ux project",
+            "image":"design-sumone.jpg",
+            "type":"UX",
+            "year":"2017"
+        }
+    ]
+}
+

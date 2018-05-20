@@ -18,7 +18,8 @@ var src = {
     img:  'src/img/*',
     icons: 'src/icons/*',
     js: 'src/js/*',
-    jquery:'node_modules/jquery/dist/jquery.min.js',
+    jquery: 'node_modules/jquery/dist/jquery.min.js',
+    typeit: 'node_modules/typeit/dist/typeit.min.js',
 };
 
 var dist = {
@@ -79,6 +80,12 @@ gulp.task('jquery', function () {
         .pipe(gulp.dest(dist.jquery));
 });
 
+// Move typeit to dist
+gulp.task('typeit', function () {
+    return gulp.src(src.typeit)
+        .pipe(gulp.dest(dist.jquery));
+});
+
 // Move ks to dist
 gulp.task('js', function () {
     return gulp.src(src.js)
@@ -112,4 +119,4 @@ gulp.task('hb', function () {
         .pipe(gulp.dest(dist.main));
 });
 
-gulp.task('default', ['fonts', 'icons', 'jquery', 'data', 'serve']);
+gulp.task('default', ['fonts', 'icons', 'jquery', 'typeit', 'data', 'serve']);

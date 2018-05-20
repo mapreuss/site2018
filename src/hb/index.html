@@ -38,5 +38,18 @@
             </article>
         {{/each}}
     </section>
+
+    <section id="ux">
+        {{#each ux.projects}}
+        <article>
+            <figure>
+                <img src="images/{{ image }}" alt="{{ name }}">
+            </figure>
+            <h2>{{ name }}</h2>
+            <p>{{ type }}</p>
+            <p>{{ year }}</p>
+        </article>
+        {{/each}}
+    </section>
 </div>
 {{> footer}}

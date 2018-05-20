@@ -1,15 +1,18 @@
 var randomQuotes = function (quotes) {
-    var totalQuotes = '';
     var quote = "";
 
     $.each(quotes, function () {
-        totalQuotes = this.length;
         quote = this;
     });
-    
-    var quoteNumber = Math.floor((Math.random() * totalQuotes));
-    
-    $("#quotes").text(quote[quoteNumber]);
+
+    new TypeIt('#quotes', {
+        strings: quote,
+        breakLines: false,
+        nextStringDelay: 10000,
+        deleteSpeed: 100,
+        loop: true,
+        cursor: false
+    });
 }
 
 var menu = function () {
