@@ -16,7 +16,9 @@ var src = {
     },
     fonts:'src/fonts/*',
     img:  'src/img/*',
-    icons:'src/icons/*',
+    icons: 'src/icons/*',
+    js: 'src/js/*',
+    jquery:'node_modules/jquery/dist/jquery.min.js',
 };
 
 var dist = {
@@ -24,11 +26,14 @@ var dist = {
     fonts: 'dist/fonts',
     icons: 'dist/images/',
     img: 'dist/images',
+    data: 'dist/data',
+    jquery: 'dist/js',
+    js: 'dist/js',
     main: './dist/'
 }
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass', 'hb', 'images'], function() {
+gulp.task('serve', ['sass', 'hb', 'images', 'js'], function() {
 
     browserSync.init({
         server: "./dist/"
@@ -36,6 +41,7 @@ gulp.task('serve', ['sass', 'hb', 'images'], function() {
 
     gulp.watch(src.scss, ['sass']);
     gulp.watch(src.scss, ['images']);
+    gulp.watch(src.js, ['js']);
     gulp.watch(src.hb.main, ['hb']);
     gulp.watch(src.hb.data, ['hb']);
     gulp.watch(src.hb.main).on('change', reload);
@@ -55,10 +61,28 @@ gulp.task('fonts', function() {
         .pipe(gulp.dest(dist.fonts));
 });
 
+// Move data to dist
+gulp.task('data', function () {
+    return gulp.src('./src/data/quotes.json')
+        .pipe(gulp.dest(dist.data));
+});
+
 // Move icons to dist
 gulp.task('icons', function() {
     return gulp.src(src.icons)
         .pipe(gulp.dest(dist.icons));
+});
+
+// Move jQuery to dist
+gulp.task('jquery', function () {
+    return gulp.src(src.jquery)
+        .pipe(gulp.dest(dist.jquery));
+});
+
+// Move ks to dist
+gulp.task('js', function () {
+    return gulp.src(src.js)
+        .pipe(gulp.dest(dist.js));
 });
 
 // Images
@@ -88,4 +112,4 @@ gulp.task('hb', function () {
         .pipe(gulp.dest(dist.main));
 });
 
-gulp.task('default', ['fonts', 'icons', 'serve']);
+gulp.task('default', ['fonts', 'icons', 'jquery', 'data', 'serve']);

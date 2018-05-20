@@ -4,13 +4,12 @@
     <header>
         <p>meu nome é</p>
         <h1>Marta Preuss</h1>
-        <p>{{ quotes.quote }} </p>
+        <p id="quotes">{{ quotes.quote }}</p>
         <p>e eu gosto de 
             <label for="open-menu" class="menu" id="menu-selected">deixar as coisas bonitas</label>
         </p>
 
-        <input type="checkbox" id="open-menu" name="open-menu">
-        <nav class="menu-wrapper">
+        <nav id="main-menu" class="menu-wrapper">
             <ul>
                 {{#each menu.menu}}
                 <li><a href="{{id}}" data-action="{{id}}">{{name}}</a></li>

@@ -28,9 +28,9 @@ figure{
 
 // Typography
 h1{
-    font: 30px/30px 'gloss_and_bloom', sans-serif;
+    font: 40px/40px 'gloss_and_bloom', sans-serif;
     margin: 0;
-    padding: 1em 0;
+    padding: 0.3em 0 0;
 }
 h2{
     font-size: 16px;
@@ -45,6 +45,11 @@ a, a:visited, a:hover{
 }
 a:hover{
     text-decoration: underline;
+}
+
+// Header
+header{
+    margin-top: 20px;
 }
 
 // Social nav
@@ -83,17 +88,20 @@ header .social{
         display: inline-block;
         margin-left: 10px;
     }
-    &:active &:after{
-        transform: rotate(180deg);
+    &.open{
+        &:after{
+            transform: rotate(180deg);
+        }
     }
 }
 .menu-wrapper{
     margin-left: 135px;
     position: absolute;
     height: 0;
-    max-height: 200px;
+    max-height: 240px;
     transition: height 200ms;
     overflow: hidden;
+    z-index: 2;
     ul{
         list-style: none;
         padding: 0;
@@ -102,18 +110,18 @@ header .social{
     li{
         padding: 8px 0;
     }
-}
-input[type="checkbox"]{
-    display: none;
-}
-input[type="checkbox"]:checked + .menu-wrapper{
-    height: 200px;
+    &.open{
+        height: 240px;
+    }
 }
 
 // Portfolio items
 section{
     display: flex;
     margin-top: 100px;
+    &.menu-opened{
+        opacity: 0.1;
+    }
     article{
         flex: 1;
         margin: 0 10px;
