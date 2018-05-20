@@ -8,6 +8,13 @@
     font-style: normal;
 }
 
+// Mixins
+@mixin mobile-only {
+	@media (max-width : 600px) {
+		@content;
+	}
+}
+
 // Defaults
 body{
     background: #F0F0F0;
@@ -58,6 +65,11 @@ header .social{
     position: absolute;
     top: 50px;
     right: 20px;
+
+    @include mobile-only{
+        top: 0;
+    }
+
     ul{
         list-style: none;
         padding: 0;
@@ -80,6 +92,11 @@ header .social{
     display: inline-block;
     font-weight: bold;
     cursor: pointer;
+
+    @include mobile-only{
+        padding: 15px 0 0;
+    }
+
     &:after{
         content: "";
         width: 16px;
@@ -102,6 +119,10 @@ header .social{
     transition: height 200ms;
     overflow: hidden;
     z-index: 2;
+
+    @include mobile-only{
+        margin-left: 0;
+    }
     ul{
         list-style: none;
         padding: 0;
@@ -119,6 +140,11 @@ header .social{
 section{
     display: flex;
     margin-top: 100px;
+
+    @include mobile-only{
+        margin-top: 30px;
+    }
+    
     &.menu-opened{
         opacity: 0.1;
     }
