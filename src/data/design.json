@@ -11,6 +11,18 @@
             "image":"design-concurso.png",
             "type":"Design gráfico",
             "year":"2017"
+        },
+        {
+            "name": "Outro item",
+            "image": "design-concurso.png",
+            "type": "Design gráfico",
+            "year": "2017"
+        },
+        {
+            "name": "Outro item",
+            "image": "design-concurso.png",
+            "type": "Design gráfico",
+            "year": "2017"
         }
     ]
 }

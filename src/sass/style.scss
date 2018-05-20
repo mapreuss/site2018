@@ -139,20 +139,44 @@ header .social{
 // Portfolio items
 section{
     display: flex;
+    flex-wrap: wrap;
     margin-top: 100px;
+    transition: opacity 200ms;
 
     @include mobile-only{
         margin-top: 30px;
     }
-    
+
     &.menu-opened{
         opacity: 0.1;
     }
+
     article{
-        flex: 1;
-        margin: 0 10px;
+        margin: 0 0 50px 2%;
+        flex: 1 0 25%;
+
+        &:first-of-type,
+        &:nth-child(4n){
+            margin-left: 0;
+        }
+
+        @include mobile-only{
+            flex: 1 0 33%;
+            margin-left: 4%;
+            &:first-of-type,
+            &:nth-child(3n){
+                margin-left: 0;
+            }
+            &:nth-child(4n){
+                margin-left: 4%;
+            }
+        }
+        
         img{
             max-width: 100%;
+        }
+        p{
+            padding: 0 0 0.5em;
         }
     }
 }
