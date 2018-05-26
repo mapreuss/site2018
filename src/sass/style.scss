@@ -180,3 +180,92 @@ section{
         }
     }
 }
+
+
+// Detail info
+.details{
+    background: #fff;
+    border: 1px solid #707070;
+    width: 90%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 40px;
+    box-shadow: 0 0 999px 999px rgba(#fff, .7);
+    display: none;
+    header{
+        padding: 20px;
+        border-bottom: 1px solid #707070;
+        margin: 0;
+        overflow: hidden;
+        clear: both;
+        width: 100%;
+        h2{
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            line-height: 25px;
+        }
+        nav{
+            float: right;
+            ul{
+                padding: 0;
+                margin: 0;
+                list-style: none;
+            }
+            li{
+                display: inline-block;
+                &:last-child{
+                    margin-left: 40px;
+                }
+            }
+            a{
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+                text-indent: -999px;
+                overflow: hidden;
+            }
+            .before{
+                background:url(../images/before.png) 0 0 no-repeat;
+            }
+            .next{
+                background:url(../images/next.png) 0 0 no-repeat;
+            }
+            .close{
+                background:url(../images/close.png) 0 0 no-repeat;
+            }
+        }
+    }
+    article{
+        position: relative;
+    }
+    .info-card{
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        background: #FFF;
+        border: 1px solid #707070;
+        padding: 20px;
+        width: 460px;
+
+        @include mobile-only{
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: relative;
+            box-sizing: border-box;
+            border: none;
+        }
+
+        ul{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li{
+                line-height: 40px;
+            }
+        }
+    }
+}
