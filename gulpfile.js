@@ -99,7 +99,8 @@ gulp.task('images', function () {
             width : 536,
             height : 284,
             crop : true,
-            upscale : false
+            upscale : false,
+            gravity: "North"
         }))   
         .pipe(cache(imagemin({
             optimizationLevel: 1,

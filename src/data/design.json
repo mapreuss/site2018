@@ -1,28 +1,56 @@
 {
     "projects": [
         {
+            "id": "logotipagemsumone",
             "name": "Logotipagem SumOne",
-            "image":"design-sumone.jpg",
+            "thumbnail":"design-sumone.jpg",
             "type":"Design gráfico",
-            "year":"2017"
+            "year":"2017",
+            "programs": [
+                "Adobe Illustrator"
+            ],
+            "images": [
+                "https://mir-s3-cdn-cf.behance.net/project_modules/1400/0a1e5954151745.594fc6da5493b.jpg",
+                "https://mir-s3-cdn-cf.behance.net/project_modules/1400/7f524654151745.594fc6da55bf6.jpg",
+                "https://mir-s3-cdn-cf.behance.net/project_modules/1400/42b48c54151745.594fc6da561cc.jpg",
+                "https://mir-s3-cdn-cf.behance.net/project_modules/1400/47220354151745.594fc6da54d27.jpg",
+                "https://mir-s3-cdn-cf.behance.net/project_modules/1400/990fd254151745.594fc6da55120.jpg",
+                "https://mir-s3-cdn-cf.behance.net/project_modules/1400/1cfe7854151745.594fc6da545e9.jpg",
+                "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/6912a654151745.594fc6da5561f.png"
+            ]
         },
         {
-            "name": "Outro item",
-            "image":"design-concurso.png",
-            "type":"Design gráfico",
-            "year":"2017"
+            "id": "websitesumone",            
+            "name": "Website SumOne",
+            "thumbnail":"design-site-sumone.png",
+            "type":"Web design",
+            "year":"2017",
+            "programs": [
+                "Adobe XD,",
+                "Visual Studio Code,",
+                "WordPress"
+            ],
+            "images": [
+                "https://mir-s3-cdn-cf.behance.net/project_modules/fs/5b91eb54132941.594e8078841db.png"
+            ]
         },
         {
-            "name": "Outro item",
-            "image": "design-concurso.png",
-            "type": "Design gráfico",
-            "year": "2017"
-        },
-        {
-            "name": "Outro item",
-            "image": "design-concurso.png",
-            "type": "Design gráfico",
-            "year": "2017"
+            "id": "oraculodapromocao",
+            "name": "Oráculo da Promoção",
+            "thumbnail": "design-oraculo.png",
+            "type": "Web design",
+            "year": "2017",
+            "programs": [
+                "Adobe Illustrator,",
+                "Adobe Photoshop,",
+                "Adobe Indesign,",
+                "Visual Studio Code,",
+                "HTML/CSS"
+            ],
+            "images": [
+                "https://mir-s3-cdn-cf.behance.net/project_modules/1400/b44c5354132823.594e7ed52fff9.png",
+                "https://mir-s3-cdn-cf.behance.net/project_modules/1400/3b3e2954132823.594e7ed52fd84.jpg"
+            ]
         }
     ]
 }

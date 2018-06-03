@@ -1,0 +1,36 @@
+<section class="details" id="details-{{ details-id }}">
+    <header>
+        <h2>{{ details-name }}</h2>
+        <nav>
+            <ul> 
+                <li>
+                    <a class="before" href="">Anterior</a>
+                </li>
+                <li>
+                    <a class="next" href="">Próximo</a>
+                </li>
+                <li>
+                    <a class="close" href="#">Fechar</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <article>
+        <div class="info-card">
+            <ul>
+                <li>{{ details-name }}</li>
+                <li>{{ details-type }}</li>
+                <li>{{ details-year }}</li>
+                <li>
+                    {{#each details-programs as |program|}}
+                    {{ program }}
+                    {{/each }}
+                </li>
+            </ul>
+        </div>
+
+        {{#each details-images as |image|}}
+            <img src="{{ image }}" alt="">
+        {{/each }}
+    </article>
+</section>

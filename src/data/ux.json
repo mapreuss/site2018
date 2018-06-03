@@ -1,10 +1,12 @@
 {
     "projects": [
         {
-            "name": "ux project",
-            "image":"design-sumone.jpg",
-            "type":"UX",
-            "year":"2017"
+            "id": "ux-project",
+            "name": "UX Project",
+            "image": "design-sumone.jpg",
+            "type": "Design gráfico",
+            "year": "2017",
+            "programs": "Adobe Illustrator"
         }
     ]
 }
