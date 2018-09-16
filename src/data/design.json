@@ -38,7 +38,7 @@
             "id": "oraculodapromocao",
             "name": "Oráculo da Promoção",
             "thumbnail": "design-oraculo.png",
-            "type": "Web design",
+            "type": "Web design e Formatação de E-book",
             "year": "2017",
             "programs": [
                 "Adobe Illustrator,",
@@ -50,6 +50,38 @@
             "images": [
                 "https://mir-s3-cdn-cf.behance.net/project_modules/1400/b44c5354132823.594e7ed52fff9.png",
                 "https://mir-s3-cdn-cf.behance.net/project_modules/1400/3b3e2954132823.594e7ed52fd84.jpg"
+            ]
+        },
+        {
+            "id": "olhonaconcorrencia",
+            "name": "De Olho na Concorrência",
+            "thumbnail": "design-concorrencia.png",
+            "type": "Web design",
+            "year": "2017",
+            "programs": [
+                "Adobe Illustrator,",
+                "Visual Studio Code,",
+                "HTML/CSS"
+            ],
+            "images": [
+                "https://mir-s3-cdn-cf.behance.net/project_modules/1400/07e02e54132217.594e766fca01a.png",
+                "https://mir-s3-cdn-cf.behance.net/project_modules/1400/3962d454132217.594e766fca509.png"
+            ]
+        }
+        ,
+        {
+            "id": "concurso",
+            "name": "Landing page - Concurso",
+            "thumbnail": "design-concurso.png",
+            "type": "Web design",
+            "year": "2017",
+            "programs": [
+                "Adobe XD,",
+                "Visual Studio Code,",
+                "HTML/CSS"
+            ],
+            "images": [
+                "https://mir-s3-cdn-cf.behance.net/project_modules/1400/bd45be56046447.599defbd29fcb.png"
             ]
         }
     ]

@@ -41,6 +41,11 @@
             "icon": "behance.png"
         },
         {
+            "name": "Github",
+            "url": "https://github.com/mapreuss",
+            "icon": "github.png"
+        },
+        {
             "name": "Contato",
             "url": "#",
             "icon": "contato.png"
