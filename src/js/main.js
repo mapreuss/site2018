@@ -22,6 +22,17 @@ var menu = function () {
         $(this).toggleClass("open");
         $("#main-menu").toggleClass("open");
         $("section").toggleClass("menu-opened");
+    });
+
+    $(".menu-item").click(function (e) {
+        e.preventDefault();
+        var page = $(this).attr('data-action');
+        $('.portfolio-area').hide();
+        $('#' + page).show();
+        $("#menu-selected").removeClass("open");
+        $("#main-menu").removeClass("open");
+        $("section").removeClass("menu-opened");
+        $(".menu").text($(this).text());
     })
 }
 

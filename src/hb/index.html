@@ -12,7 +12,7 @@
         <nav id="main-menu" class="menu-wrapper">
             <ul>
                 {{#each menu.menu}}
-                <li><a href="{{id}}" data-action="{{id}}">{{name}}</a></li>
+                <li><a class="menu-item" href="{{id}}" data-action="{{id}}">{{name}}</a></li>
                 {{/each}}
             </ul>
         </nav>
@@ -25,9 +25,9 @@
             </ul>
         </nav>
     </header>
-
-    <section id="dsn">
-        {{#each design.projects}}
+    
+    <section id="dsn" class="portfolio-area">
+        {{#each dsn.projects}}
             <article>
                 <figure>
                     <a class="show-details" href="#details-{{id}}">
@@ -48,6 +48,36 @@
                 details-images = images
             }}
         {{/each}}
+    </section>
+
+    <section id="ux" class="portfolio-area">
+        {{#each ux.projects}}
+        <article>
+            <figure>
+                <a class="show-details" href="#details-{{id}}">
+                    <img src="images/{{ thumbnail }}" alt="{{ name }}">
+                </a>
+            </figure>
+            <h2>{{ name }}</h2>
+            <p>{{ type }}</p>
+            <p>{{ year }}</p>
+        </article>
+    
+        {{> details
+        details-id = id
+        details-name = name
+        details-type = type
+        details-year = year
+        details-programs = programs
+        details-images = images
+        }}
+        {{/each}}
+    </section>
+
+    <section id="contact" class="portfolio-area">
+        <article>
+            <p>Falar comigo é fácil. Você pode preencher o formulário ou mandar um e-mail diretamente para marta.preuss@gmail.com.</p>
+        </article>
     </section>
 
      
