@@ -5,18 +5,19 @@
         <p>meu nome é</p>
         <h1>Marta Preuss</h1>
         <p id="quotes">{{ quotes.quote }}</p>
-        <p>e eu gosto de 
+        <p>e sou uma UX designer com o sonho de ser Product Manager.</p>
+        <!-- <p>e eu gosto de
             <label for="open-menu" class="menu" id="menu-selected">deixar as coisas bonitas</label>
-        </p>
+        </p> -->
 
-        <nav id="main-menu" class="menu-wrapper">
+        <!-- <nav id="main-menu" class="menu-wrapper">
             <ul>
                 {{#each menu.menu}}
                 <li><a class="menu-item" href="{{id}}" data-action="{{id}}">{{name}}</a></li>
                 {{/each}}
             </ul>
-        </nav>
-        
+        </nav> -->
+
         <nav class="social">
             <ul>
                 {{#each menu.social}}
@@ -25,8 +26,8 @@
             </ul>
         </nav>
     </header>
-    
-    <section id="dsn" class="portfolio-area">
+
+    <!-- <section id="dsn" class="portfolio-area">
         {{#each dsn.projects}}
             <article>
                 <figure>
@@ -62,7 +63,7 @@
             <p>{{ type }}</p>
             <p>{{ year }}</p>
         </article>
-    
+
         {{> details
         details-id = id
         details-name = name
@@ -72,14 +73,15 @@
         details-images = images
         }}
         {{/each}}
-    </section>
+    </section> -->
 
-    <section id="contact" class="portfolio-area">
+    <!-- <section id="contact" class="portfolio-area"> -->
         <article>
-            <p>Falar comigo é fácil. Você pode preencher o formulário ou mandar um e-mail diretamente para marta.preuss@gmail.com.</p>
+            <p>Para falar comigo, manda um alô no <strong>marta.preuss@gmail.com</strong>.</p>
         </article>
-    </section>
+    <!-- </section> -->
 
-     
+    <p><em>Como tudo na vida, esse é um site temporário cheio de potencial. Mas meu <strong><a href="http://linkedin.com/in/mapreuss" target="_blank">Linkedin</a></strong> tá em dia, tá?</em></p>
+
 </div>
 {{> footer}}

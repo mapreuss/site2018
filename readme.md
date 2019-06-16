@@ -6,13 +6,15 @@ This is the code of my personal website and portfolio.
 
 - NPM
 - Gulp
+- imagemagick
+- graphicsmagick
 
-Images:
+You'll use this to resize the images:
 ```
 apt-get install imagemagick
 apt-get install graphicsmagick
 ```
-or 
+or
 
 ```
 brew install imagemagick
